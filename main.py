@@ -1,20 +1,23 @@
-# This is a sample Python script.
+import argparse
+import numpy as np
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+parser = argparse.ArgumentParser()
+parser.add_argument("operation", help="Operation to perform (+,-,*,/, %)")
+parser.add_argument("num1", type=float, help="First number")
+parser.add_argument("num2", type=float, help="Second number")
+args = parser.parse_args()
 
+if args.operation == '+':
+    result = np.add(args.num1, args.num2)
+elif args.operation == '-':
+    result = np.subtract(args.num1, args.num2)
+elif args.operation == '*':
+    result = np.multiply(args.num1, args.num2)
+elif args.operation == '/':
+    result = np.divide(args.num1, args.num2)
+elif args.operation == '%':
+    result = args.num1 % args.num2
+else:
+    raise ValueError("Invalid operation")
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('welcome')
-    print('1. Add')
-    print('2. Subtract')
-    print('3. Multiply')
-    print('4. Divide')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(result)
