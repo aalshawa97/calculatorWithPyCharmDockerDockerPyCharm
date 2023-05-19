@@ -1,6 +1,6 @@
-//Abdullah Alshawa
-//5/19/23
-//Kubernetes AWS Preparation
+#Abdullah Alshawa
+#5/19/23
+#Kubernetes AWS Preparation
 import argparse
 import numpy as np
 
