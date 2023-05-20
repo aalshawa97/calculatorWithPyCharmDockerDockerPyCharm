@@ -1,5 +1,5 @@
 #Abdullah Alshawa
-#5/19/23
+#5/20/23
 #Kubernetes AWS Preparation
 import argparse
 import numpy as np
@@ -24,3 +24,4 @@ else:
     raise ValueError("Invalid operation")
 
 print(result)
+print("Thank you")
