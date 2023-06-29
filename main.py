@@ -22,3 +22,4 @@ else:
     raise ValueError("Invalid operation")
 
 print(result)
+print("Thanks, goodbye")
